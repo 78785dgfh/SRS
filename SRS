@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число от 1 до 5:");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                greetings();
+                break;
+            case 2:
+                checkSign(5, -3, 2);
+                break;
+            case 3:
+                selectColor();
+                break;
+            case 4:
+                compareNumbers();
+                break;
+            case 5:
+                addOrSubtractAndPrint(10, 5, true);
+                break;
+            default:
+                System.out.println("Неверный выбор");
+        }
+    }
+
+    // (1) Метод greetings()
+    public static void greetings() {
+        System.out.println("Hello");
+        System.out.println("World");
+        System.out.println("from");
+        System.out.println("Java");
+    }
+
+    // (2) Метод checkSign(..)
+    public static void checkSign(int a, int b, int c) {
+        int sum = a + b + c;
+        if (sum >= 0) {
+            System.out.println("Сумма положительная");
+        } else {
+            System.out.println("Сумма отрицательная");
+        }
+    }
+
+    // (3) Метод selectColor()
+    public static void selectColor() {
+        int data = 15;
+        if (data <= 10) {
+            System.out.println("Красный");
+        } else if (data <= 20) {
+            System.out.println("Желтый");
+        } else {
+            System.out.println("Зеленый");
+        }
+    }
+
+    // (4) Метод compareNumbers()
+    public static void compareNumbers() {
+        int a = 5;
+        int b = 3;
+        if (a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
+        }
+    }
+
+    // (5) Метод addOrSubtractAndPrint
+    public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+        if (increment) {
+            System.out.println(initValue + delta);
+        } else {
+            System.out.println(initValue - delta);
+        }
+    }
+}
